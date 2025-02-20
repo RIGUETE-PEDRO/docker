@@ -43,10 +43,10 @@ docker run --rm -it -w "/usr/src/app" -v "${PWD}:/usr/src/app" node bash
 ### 12. `docker run --rm -it -w "/usr/src/app" -v "${PWD}:/usr/src/app" node bash`
 **Explicação dos parâmetros:**
 
-`--rm → Remove o container ao sair (opcional).
--it → Modo interativo (para abrir um terminal dentro do container).
--w "/usr/src/app" → Define o diretório de trabalho dentro do container.
--v "${PWD}:/usr/src/app" → Monta a pasta atual (${PWD}) dentro do container no caminho /usr/src/app.`
+`--rm → Remove o container ao sair (opcional).<br>
+-it → Modo interativo (para abrir um terminal dentro do container).<br>
+-w "/usr/src/app" → Define o diretório de trabalho dentro do container.<br>
+-v "${PWD}:/usr/src/app" → Monta a pasta atual (${PWD}) dentro do container no caminho /usr/src/app.`<br>
 
 ---
 
