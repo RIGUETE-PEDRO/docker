@@ -1,57 +1,48 @@
-<h2>aprendendo sobre o docker</h2>
-<h4>Docker é uma plataforma de contêinerização que permite empacotar, distribuir e executar aplicações de maneira isolada e portátil. Ele facilita a criação de ambientes leves e consistentes para o desenvolvimento e a execução de software.</h4>
+# Aprendendo sobre o Docker
 
-<h4>comando do docker</h4>
+**Docker** é uma plataforma de contêinerização que permite empacotar, distribuir e executar aplicações de maneira isolada e portátil. Ele facilita a criação de ambientes leves e consistentes para o desenvolvimento e a execução de software.
 
-<div>
-<p>docker images</p>
-<p>comando para ver as imagens intaladar </p>
-</div>
-<br>
+## Comandos Básicos do Docker
 
-<div>
-<p>docker pull ubuntu</p>
-<p>comando para baixar o ambiente ubuntu tambem usado para baixar node como outras coisas tambem podemos colocar a versao na frente assim exemplo (docker pull node:14.21.1-alpine) </p>
-</div>
+### 1. `docker images`
+- **Descrição**: Mostra as imagens Docker instaladas no seu sistema.
 
-<div>
-<p>docker rmi (nome da imagem) </p>
-<p>com esse comadno desistalamos a imagem do docker</p>
-</div>
+### 2. `docker pull <nome_da_imagem>`
+- **Descrição**: Baixa uma imagem para o seu sistema. Exemplo: `docker pull ubuntu`.  
+  Também pode incluir versões, como: `docker pull node:14.21.1-alpine`.
 
-<div>
-<p>docker run -it (nome da imagem) </p>
-<p>com esse comando rodamos a imagem do docker de forma interativa</p>
-</div> 
+### 3. `docker rmi <nome_da_imagem>`
+- **Descrição**: Remove uma imagem do Docker.
 
-<div>
-<p>docker stop (nome da imagem) </p>
-<p>com esse comando paramos a imagem do docker</p>
-</div> 
+### 4. `docker run -it <nome_da_imagem>`
+- **Descrição**: Executa uma imagem de forma interativa, permitindo que você interaja com ela no terminal.
 
-<div>
-<p>docker ps  </p>
-<p>com esse comando vemos os conteines funcionando e tambem vemos nome id e quando foi criado</p>
-</div> 
+### 5. `docker stop <nome_do_conteiner>`
+- **Descrição**: Para um contêiner em execução.
 
-<div>
-<p>docker ps -a  </p>
-<p>com esse comando vemos todos os conteines e tambem vemos nome id e quando foi criado e quanto foram terminados</p>
-</div> 
+### 6. `docker ps`
+- **Descrição**: Exibe os contêineres em execução, mostrando seu ID, nome e tempo de criação.
 
-<div>
-<p>docker rm $(docker ps -f status=exited -q)</p>
-<p>comando para encerrar todo os que a gente saiu usando exit</p>
-<p>docker ps -f status=exited -q  </p>
-<p>com esse comando vemos todos os conteines que foram exit,podendo usar o nomes deles para voltar dps</p>
-</div> 
+### 7. `docker ps -a`
+- **Descrição**: Exibe todos os contêineres (em execução e parados), com informações adicionais sobre seu status.
 
-<div>
-<p>docker rm (nome do conteiner) </p>
-<p>com esse comando apagamos o conteiner atravez do nome dele </p>
-</div> 
+### 8. `docker rm $(docker ps -f status=exited -q)`
+- **Descrição**: Remove todos os contêineres que foram parados com `exit`.
 
-<div>
-<p>docker run -d --name (nome do conteiner) ubuntu  </p>
-<p>com esse comando criamos um conteiner com o nome que  escolhermos </p>
-</div> 
+### 9. `docker ps -f status=exited -q`
+- **Descrição**: Lista todos os contêineres que saíram (status "exited"), para que você possa reusá-los ou removê-los.
+
+### 10. `docker rm <nome_do_conteiner>`
+- **Descrição**: Remove um contêiner específico usando seu nome.
+
+### 11. `docker run -d --name <nome_do_conteiner> <imagem>`
+- **Descrição**: Cria e executa um contêiner em segundo plano com o nome especificado. Exemplo: `docker run -d --name meu_container ubuntu`.
+
+---
+
+Esses comandos básicos são essenciais para quem está começando a aprender Docker. Eles permitem que você manipule imagens e contêineres de forma eficiente!
+
+---
+
+**Dicas:**  
+- Lembre-se de que sempre que você cria ou remove imagens/contêineres, eles podem ocupar ou liberar bastante espaço no seu sistema, então sempre verifique o que está em execução ou armazenado.
