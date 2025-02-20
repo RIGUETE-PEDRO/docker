@@ -38,6 +38,16 @@
 ### 11. `docker run -d --name <nome_do_conteiner> <imagem>`
 - **Descrição**: Cria e executa um contêiner em segundo plano com o nome especificado. Exemplo: `docker run -d --name meu_container ubuntu`.
 
+docker run --rm -it -w "/usr/src/app" -v "${PWD}:/usr/src/app" node bash
+
+### 12. `docker run --rm -it -w "/usr/src/app" -v "${PWD}:/usr/src/app" node bash`
+**Explicação dos parâmetros:**
+
+`--rm → Remove o container ao sair (opcional).
+-it → Modo interativo (para abrir um terminal dentro do container).
+-w "/usr/src/app" → Define o diretório de trabalho dentro do container.
+-v "${PWD}:/usr/src/app" → Monta a pasta atual (${PWD}) dentro do container no caminho /usr/src/app.`
+
 ---
 
 Esses comandos básicos são essenciais para quem está começando a aprender Docker. Eles permitem que você manipule imagens e contêineres de forma eficiente!
