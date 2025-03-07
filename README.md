@@ -11,7 +11,7 @@
 - **Descrição**: Baixa uma imagem para o seu sistema. Exemplo: `docker pull ubuntu`.  
   Também pode incluir versões, como: `docker pull node:14.21.1-alpine`.
 
-### 3. `docker rmi <nome_da_imagem>`
+### 3. `docker rm <nome_da_imagem>`
 - **Descrição**: Remove uma imagem do Docker.
 
 ### 4. `docker run -it <nome_da_imagem>`
